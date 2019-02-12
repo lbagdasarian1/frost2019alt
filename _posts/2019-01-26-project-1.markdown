@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 11
+date: 2019-01-26
+img: artboardjorja.png
+title: Jorja Smith
+description:
+
+---

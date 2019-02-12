@@ -1,0 +1,155 @@
+ <!-- Portfolio Modals -->
+ {% for post in site.posts %}
+    <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>{{ post.title }}</h2>
+                            <hr class="star-primary">
+                                {% if post.title!='Tickets' and post.title!='Accessibility' and post.title!='Transportation'%}  <!-- NON FAQ stuff -->
+                                    {% if post.description %}
+                                         <style>
+                                            .descriptionText{
+                                                height: 150px;
+                                                overflow-y: scroll;
+                                            }
+                                            </style>
+                                        <div class="descriptionText"> <p>{{ post.description }}</p> </div>
+                                    {% endif %}
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                                {% endif %}
+                                {% if post.title=='Accessibility' %} <!--FAQ stuff -->
+                                    <style>
+                                        .scrollable{
+                                            width:auto;
+                                            /*height: 3em;*/
+                                            background-color: white;
+                                            height: 300px;
+                                            overflow: auto; // here is the magic :)
+                                        }
+                                    </style>
+                                    <div class="scrollable"> <p><b>Will ADA parking be available?</b></p><b>Yes.</b> Individuals with a valid, state-issued disabled person parking placard or license plate will have access to parking  on Roth way between Palm and Lasuen. We will update this page with a parking map displaying this location closer to the event. For questions, please call phone: <a href="tel:650-725-0326">650-725-0326</a> or e-mail: <a href = "mailto:disability.access@stanford.edu?subject = Frost Accessibility&body = Message">disability.access@stanford.edu</a>.
+                                    <p><br/><b>Will first aid be available?</b></p><b>Yes.</b> First Aid will be available inside and around the venue. IN CASE OF EMERGENCY: DIAL 911 AND Seek assistance from staff and security personnel in the venue.<p><br/><b>Will a lost and found be available?</b></p><b>Yes. </b>We will publish details closer to the event. After the concert, unclaimed items will be taken to: Stanford Department of Public Safety: <a href="tel:650-725-0326">650-725-0326</a>. Stanford University is not responsible for any lost or stolen items.
+                                        </div>
+                                {% endif %}
+
+
+                                {% if post.title=='Transportation' %} <!--FAQ stuff -->
+                                    <style>
+                                        .scrollable{
+                                            width:auto;
+                                            /*height: 3em;*/
+                                            background-color: white;
+                                            height: 300px;
+                                            overflow: auto; // here is the magic :)
+                                        }
+                                    </style>
+                                    <div class="scrollable"> <p><b>Where is Frost Amphitheater?</b></p>Frost Amphitheater is located at <b>365 Lasuen St. Stanford, CA, 94305</b><br/><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.270155625985!2d-122.1682154848363!3d37.43072227982351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbb2852cea57f%3A0x5d84536e4ce5baa2!2sFrost+Amphitheater!5e0!3m2!1sen!2sus!4v1548619184361" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>.<p><br/><b>Where can I park?</b></p> Parking is most convenient in paid parking lots 9, 10 and Galvez. Galvez will be a prepaid lot and 9 and 10 (in the arboretum) will be cash only. We will update this page to display a map with these locations. We will publish information on parking prices closer to the event.<p><br/><b>Will shared rides and drop-off be available?</b></p><b>Yes.</b> Location TBD
+                                        </div>
+                                {% endif %}
+                                {% if post.title=='Tickets' %} <!--FAQ stuff -->
+                                    <style>
+                                        .scrollable{
+                                            width:auto;
+                                            /*height: 3em;*/
+                                            background-color: white;
+                                            height: 300px;
+                                            overflow: auto; // here is the magic :)
+                                        }
+                                    </style>
+                                    <div class="scrollable"> <p><b>How much do tickets cost?</b></p>
+                                        <style>
+                                        .mytable{
+                                            
+                                        }
+                                        table, th, td {
+                                            border: 1px solid #943671;
+                                            text-align: center;
+                                            position:relative;
+                                            width:55%;
+                                        }
+                                    </style>
+                                        <table style="display:inline-table">
+                                          <tr>
+                                            <th>Group</th>
+                                            <th>Price</th> 
+                                          </tr>
+                                          <tr>
+                                            <td>Student</td>
+                                            <td>$25.00</td> 
+                                          </tr>
+                                          <tr>
+                                            <td>General public<sup>*</sup></td>
+                                            <td>$49.50</td> 
+                                          </tr>
+                                        </table>
+                                        <br/>
+                                        Note that these prices do not include ticket processing fees.<br/>
+                                        
+                                        <sup>*</sup><small>Includes alumni, faculty, and staff</small>
+                                        <p><br/><b>When do tickets go on sale?</b></p> TBD.
+                                        <p><br/><b>Where can I purchase tickets?</b></p>Tickets will be available online soon.
+                                        <p><br/><b>Do I need to bring my Stanford ID?</b></p> <b>Yes.</b> If you are a Stanford student you must bring your Stanford ID. Your Stanford student ticket will be pre-loaded to your SUID. IDs not matching with the individual will be confiscated. Please have your ticket with you at all times. Any ticketing issues can be addressed at the Box Office.<p><br/><b>Will re-entry be allowed?</b></p> <b>No.</b> You may leave the event at any time but re-entry will be prohibited. <p><br/><b>Is there an age minimum?</b></p> <b>No.</b> All guests require a ticket for entry.<p><br/><b>What are the set times?</b></p>Doors open at 5:00 PM and the show starts at 6:00 PM. Specific set times will not be released and are subject to change.<p><br/><b>What can I bring to the event?</b></p>Attendees must abide by the clear bag policy. Guidelines can be found <a href="https://gostanford.com/news/2016/7/11/all-clear.aspx">here</a>. There will be additional regulations TBD.<p><br/><b>Will alcohol or smoking be allowed?</b></p><b>Neither.</b> You may be required to open your beverage containers for review prior to entering the venue. Persons in possession of alcohol or who are visibly intoxicated will be denied entry, or are subject to removal from the venue, with no refund.<br/>No smoking of ANY kind (including e-cigarettes) will be tolerated inside or in the immediate vicinity outside of the venue, within 30 feet of the venue, and within 30 feet of ticket lines. Those who are found smoking inside the venue may be subject to removal with no refund.<p><br/>
+
+
+                                        </div>
+                                    <div> <br/><br/></div>
+                                {% endif %} <!--End of FAQ stuff -->
+                            
+                            <ul class="list-inline item-details">
+                                {% if post.client %}
+                                    <li>Client:
+                                        <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if post.project-date %}
+                                    <li>Date:
+                                        <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                                {% if post.category %}
+                                    <li>Service:
+                                        <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
+                                        </strong>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                             <style>
+                                .sticky-image-wrapper{
+                                    position: fixed;
+                                    bottom: 0;
+                                    text-align: center;
+                                    left:0;
+                                    width: 100%;
+                                    height: auto;
+                                    margin-left: -250px;
+                                }
+
+                                .sticky-image-wrapper img{
+                                    display: table;
+                                    position: relative;
+                                    margin: auto;
+                               }
+                               </style>
+                            <div class="sticky-image-wrapper">
+                               <img src="img/portfolio/longbar.png" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

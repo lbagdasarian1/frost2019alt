@@ -1,0 +1,9 @@
+---
+layout: default
+modal-id: 12
+date: 2019-01-26
+img: artboard.png
+title: Kali Uchis
+description: With her debut LP Isolation, out now to massive critical acclaim, Kali Uchis stakes a very convincing claim at being the hot new crossover act to watch. Hop scotching effortlessly between myriad genres, her mellifluous vocals shifting from sassy to angry, sultry to stinging, it is the sound of a musician coming fully, and gloriously, into her own.
+
+---
